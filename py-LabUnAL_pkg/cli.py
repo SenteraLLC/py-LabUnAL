@@ -4,7 +4,7 @@ import logging
 
 import click
 
-import <pkg_name>
+import py-LabUnAL_pkg
 
 
 @click.group()
@@ -22,4 +22,4 @@ def cli(log_level):
 @cli.command()
 def version():
     """Print application version."""
-    print(f"<pkg_name> version\t{<pkg_name>.__version__}")
+    print(f"py-LabUnAL_pkg version\t{py-LabUnAL_pkg.__version__}")

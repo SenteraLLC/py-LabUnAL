@@ -1,4 +1,4 @@
-name: <venv_name>
+name: py-LabUnAL_conda_venv
 channels:
   - conda-forge
 dependencies:

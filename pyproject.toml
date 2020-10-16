@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "<pkg_name>"
+name = "py-LabUnAL_pkg"
 version = "0.0.0"
-description = "<pkg_description>"
+description = "LABel UNcertainty using Active Learning"
 authors = []
 
 [tool.poetry.dependencies]
@@ -15,7 +15,7 @@ sphinx = "*"
 pre_commit = "*"
 
 [tool.poetry.scripts]
-<pkg_name> = "<pkg_name>.cli:cli"
+py-LabUnAL_pkg = "py-LabUnAL_pkg.cli:cli"
 
 [tool.isort]
 line_length = 88

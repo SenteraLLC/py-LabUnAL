@@ -1,7 +1,7 @@
-<pkg_name> Documentation
+py-LabUnAL_pkg Documentation
 ========================
 
-.. automodule:: <pkg_name>
+.. automodule:: py-LabUnAL_pkg
    :members:
    :undoc-members:
    :show-inheritance:

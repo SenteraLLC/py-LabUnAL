@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "<pkg_name>"
+project = "py-LabUnAL_pkg"
 copyright = "2020, Sentera Inc"
 author = "Sentera Inc"
 
