@@ -215,7 +215,7 @@ class ActiveDataLoader(Dataset):
 
         # TODO: Do we need to add the ignore_index immediately after we expand the training dataset, coz in the
         #  second and subsequent selection rounds when we would be reading label images which have been partially
-        #  labeled, we don't know what would be read for superpixels that have not been labeled. See what ViewAL does.
+        #  labeled, we don't know what would be read for superpixels that have not been labeled. Check out other repos.
         #  It does not pose a problem here because we are reading fully labeled images.
         mask = self.img_to_pixel_map[img_name]
         label_img_transformed = sample["label"]

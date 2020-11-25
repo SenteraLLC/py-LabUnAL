@@ -62,12 +62,6 @@ class Trainer:
     def cross_entropy_loss(self, logit, target):
         """Define cross entropy loss, with ignore_index as an extra parameter to mask out labels not selected."""
         n, c, h, w = logit.size()
-        # Do we need to add ignore_index here? Oh, yes!!
-        # TODO: Not sure about the loss calculation here in line 67. The model outputs negative values too.Is it right?
-        #  Check what CrossEntropyLoss expects (in pytorch documentation) for a 2 class segmentation problem.
-        # TODO: the labels are from 0 to num_classes - 1. How do we perform the loss calculation using the model
-        #  output's probability values? Do we normalize the target labels between 0 and 1? What does the loss function
-        #  expect ?
         criterion = torch.nn.CrossEntropyLoss(
             weight=None, ignore_index=255, reduction="mean"
         )

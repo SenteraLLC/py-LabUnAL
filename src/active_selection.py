@@ -24,8 +24,6 @@ def monte_carlo_inference(model, num_classes, image):
     """Perform monte carlo inference to get a range of uncertain probability values to calculate the entropy later."""
     model.eval()
     model.apply(turn_on_dropout)
-    # TODO: Why is it done this way and not directly passing the model output to the torch.nn.Softmax2d() function in
-    #  line 38?
     softmax = torch.nn.Softmax2d()
     image = image.unsqueeze(0)
     output = torch.zeros(
@@ -138,8 +136,6 @@ def select_next_batch_with_superpixels(
             superpixel_scores_expanded.append(entropy_scores[score_idx][superpixel_idx])
 
     # Step 4: Sort by entropy scores
-    # TODO: Only the superpixel info is collected ([0]). The scores are dropped. Is it sorting by the scores? hence,
-    #  x[1] ? What is the need of the first zip? What does the *sorted function return?
     _sorted_scores = np.array(
         list(
             list(
