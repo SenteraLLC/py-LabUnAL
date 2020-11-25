@@ -21,4 +21,4 @@ def cli(log_level):
 @cli.command()
 def version():
     """Print application version."""
-    print(f"py-LabUnAL_pkg version\t{LabUnAL_pkg.__version__}")
+    print(f"LabUnAL_pkg version\t{LabUnAL_pkg.__version__}")

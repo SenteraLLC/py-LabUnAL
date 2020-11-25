@@ -210,9 +210,13 @@ class ActiveDataLoader(Dataset):
 
         # This step is so important to consider only the labels of the superpixels which have been added to the current
         # active dataset and will go for the next "active" training. While calculating the loss in trainer.py,
-        # in torch.nn.CrossEntropyLoss, ignore_index is assigned a value of 255 to mask out the superpixels which have
+        # in torch.nn.CrossEntropyLoss, ignore_index is assigned a value of 255 to mask out the pixels which have
         # not been marked for labeling yet.
 
+        # TODO: Do we need to add the ignore_index immediately after we expand the training dataset, coz in the
+        #  second and subsequent selection rounds when we would be reading label images which have been partially
+        #  labeled, we don't know what would be read for superpixels that have not been labeled. See what ViewAL does.
+        #  It does not pose a problem here because we are reading fully labeled images.
         mask = self.img_to_pixel_map[img_name]
         label_img_transformed = sample["label"]
         label_img_transformed[mask == 0] = 255
