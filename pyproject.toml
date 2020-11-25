@@ -28,7 +28,7 @@ py-LabUnAL_pkg = "py-LabUnAL_pkg.cli:cli"
 line_length = 88
 multi_line_output = 3
 include_trailing_comma = true
-known_third_party = ["LabUnAL_pkg", "PIL", "active_selection", "annotation_utils", "click", "constants", "cv2", "dataloader", "image_transforms", "model", "numpy", "scipy", "skimage", "torch", "torchvision", "tqdm", "trainer", "utils"]
+known_third_party = ["LabUnAL_pkg", "PIL", "active_selection", "click", "constants", "cv2", "dataloader", "image_transforms", "model", "numpy", "scipy", "skimage", "torch", "torchvision", "tqdm", "trainer", "utils"]
 
 [build-system]
 requires = ["poetry-core"]

@@ -18,7 +18,7 @@
 
 import os
 
-import annotation_utils
+# import annotation_utils
 import utils
 from active_selection import select_next_batch_with_superpixels
 from dataloader import ActiveDataLoader
@@ -133,11 +133,13 @@ def main():
             # Note that train_dataset.image_superpixels should be the ones which are additionally selected and not the
             # cumulative ones.
             # Also, just send the image paths and not the images because they are already present in the database
+            """
             annotation_utils.initiate_labeling_job(
                 train_dataset.image_subset,
                 train_dataset.img_to_pixel_map,
                 train_dataset.image_superpixels,
             )
+            """
 
         print(selection_iter, " / Train-set length: ", len(train_dataset))
 
